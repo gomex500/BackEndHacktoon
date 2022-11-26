@@ -1,0 +1,147 @@
+### Usuarios
+@api = http://localhost:4000/api/Usuarios
+
+### Ferreterias
+@apif = http://localhost:4000/api/Ferreterias
+
+### Membresia
+@apim = http://localhost:4000/api/Membresia
+
+### Historial
+@apih = http://localhost:4000/api/Historial
+
+
+### Usuarios
+GET {{api}}
+
+###
+POST {{api}}
+Content-Type: application/json
+
+{
+    "Nombre": "Juan",
+    "Apellido": "gonzalez",
+    "Correo": "juan@gmail.com",
+    "Direccion": "en algun lugar",
+    "Password": "55555"
+}
+
+###
+GET {{api}}/2
+
+###
+DELETE {{api}}/2
+
+###
+PUT {{api}}/1
+Content-Type: application/json
+
+{
+    "Nombre": "Freddy",
+    "Apellido": "Gomez",
+    "Correo": "freddy@gmail.com",
+    "Direccion": "no se",
+    "Password": "1234"
+}
+
+### ferreterias
+GET {{apif}}
+
+###
+POST {{apif}}
+Content-Type: application/json
+
+{
+    "Nombre": "La Economica",
+    "Direccion": "Juigalpa",
+    "Telefono": "87646381",
+    "Propietario": "Juan Gonzalez",
+    "pCemento": "414",
+    "pArena": "500",
+    "pLadrillo": "14",
+    "pBloque": "20",
+    "pPiedra": "42"
+}
+
+###
+GET {{apif}}/2
+
+###
+DELETE {{apif}}/2
+
+###
+PUT {{apif}}/2
+Content-Type: application/json
+
+{
+    "Nombre": "La Economica",
+    "Direccion": "Juigalpa",
+    "Telefono": "84842020",
+    "Propietario": "Juan Gonzalez",
+    "pCemento": "414",
+    "pArena": "500",
+    "pLadrillo": "14",
+    "pBloque": "20",
+    "pPiedra": "42"
+}
+
+
+### membresia
+GET {{apim}}
+
+###
+POST {{apim}}
+Content-Type: application/json
+
+{
+    "IdUsuario": 1,
+    "Tipo": "Mensual",
+    "Precio": 5
+}
+
+###
+GET {{apim}}/1
+
+###
+DELETE {{apim}}/2
+
+###
+PUT {{apim}}/1
+Content-Type: application/json
+
+{
+    "IdUsuario": 1,
+    "Tipo": "Anual",
+    "Precio": 5
+}
+
+### historial
+GET {{apih}}
+
+###
+POST {{apih}}
+Content-Type: application/json
+
+{
+    "IdUsuario": 1,
+    "IdFerreteria": 1,
+    "TipoCalculo": "Pared",
+    "TotalGasto": 23489
+}
+
+###
+GET {{apih}}/1
+
+###
+DELETE {{apih}}/2
+
+###
+PUT {{apih}}/1
+Content-Type: application/json
+
+{
+    "IdUsuario": 1,
+    "IdFerreteria": 1,
+    "TipoCalculo": "Pilar",
+    "TotalGasto": 23489
+}
